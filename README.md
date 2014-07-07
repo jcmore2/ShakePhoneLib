@@ -3,7 +3,7 @@ ShakePhoneLib
 
 This library runs background service that is listening for shake movements in device.
 
-<img src='./sample.png' width='270' height='480' />
+<img src='./Sample.png' width='270' height='480' />
 
 Usage
 -----
@@ -65,6 +65,8 @@ You can stop the ShakePhone service like in this sample:
 ShakePhone.stopShakeService(context);
 
 ```
+
+and Just Shake your phone!!
 
 Credits & Contact
 -----------------
