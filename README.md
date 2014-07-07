@@ -39,7 +39,7 @@ To use ShakePhone library you can initialize ``ShakePhone`` using a Context inst
 
 ```
 
-Or customizing threshold and interval data for shakes:
+Or customizing threshold and interval when shaked:
 
 ```java
 
