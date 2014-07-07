@@ -3,6 +3,8 @@ ShakePhoneLib
 
 This library runs background service that is listening for shake movements in device.
 
+<img src='./sample.png' width='270' height='480' />
+
 Usage
 -----
 
