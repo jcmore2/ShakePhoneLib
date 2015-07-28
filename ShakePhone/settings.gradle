@@ -1,0 +1,2 @@
+include ':shakePhoneLib'
+include ':shakePhoneSample'

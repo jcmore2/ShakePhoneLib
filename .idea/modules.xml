@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ShakePhoneLib/ShakePhoneLib.iml" filepath="$PROJECT_DIR$/ShakePhoneLib/ShakePhoneLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShakePhoneSample/ShakePhoneSample.iml" filepath="$PROJECT_DIR$/ShakePhoneSample/ShakePhoneSample.iml" />
+    </modules>
+  </component>
+</project>

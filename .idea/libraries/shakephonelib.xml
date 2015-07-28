@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="shakephonelib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ShakePhoneLib/bin/shakephonelib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
