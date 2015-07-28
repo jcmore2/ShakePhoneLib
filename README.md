@@ -8,12 +8,20 @@ This library runs background service that is listening for shake movements in de
 Usage
 -----
 
+Add library to your build.gradle:
+
+```java
+
+	    compile 'com.jcmore2.shakephone:shakephone:1.0.0'
+
+``
+
 Declare ShakePhone service in your AndroidManifest:
 
 ```xml
 
 <service
-		android:name=".ShakePhoneService"
+		android:name="com.jcmore2.shakephone.ShakeService"
 		android:exported="false"
 		android:label="@string/app_name"/>
 

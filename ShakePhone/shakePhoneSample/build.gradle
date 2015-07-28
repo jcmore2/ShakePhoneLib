@@ -19,6 +19,8 @@ android {
 }
 
 dependencies {
-    compile project(':shakePhoneLib')
+    //compile project(':shakePhoneLib')
     compile 'com.android.support:support-v4:21.0.0'
+    compile 'com.jcmore2.shakephone:shakephone:1.0.0'
+
 }

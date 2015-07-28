@@ -9,6 +9,12 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.widget.Toast;
 
+/**
+ *
+ *
+ * @author jcmore2@gmail.com
+ *
+ */
 public class ShakeManager {
 
 	private static Context aContext = null;
