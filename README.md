@@ -14,7 +14,7 @@ Add library to your build.gradle:
 
 	    compile 'com.jcmore2.shakephone:shakephone:1.0.0'
 
-``
+```
 
 Declare ShakePhone service in your AndroidManifest:
 
