@@ -12,7 +12,7 @@ Add library to your build.gradle:
 
 ```java
 
-	    compile 'com.jcmore2.shakephone:shakephone:1.0.0'
+	    compile 'com.jcmore2.shakephone:shakePhoneLib:1.0.0'
 
 ```
 
