@@ -24,7 +24,7 @@ ext {
     bintrayName = 'shakephone'
 
     publishedGroupId = 'com.jcmore2.shakephone'
-    libraryName = 'ShakePhone'
+    libraryName = 'shakephone'
     artifact = 'shakephone'
 
     libraryDescription = 'This library runs background service that is listening for shake movements in device.'
@@ -43,9 +43,6 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
-dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
-}
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
