@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'shakeit'
+
+    publishedGroupId = 'com.jcmore2.shakeit'
+    libraryName = 'shakeit'
+    artifact = 'shakeit'
+
+    libraryDescription = 'This library runs background service that is listening for shake movements in device.'
+
+    siteUrl = 'https://github.com/jcmore2/ShakePhoneLib'
+    gitUrl = 'https://github.com/jcmore2/ShakePhoneLib.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'jcmore2'
+    developerName = 'Juan Carlos Moreno'
+    developerEmail = 'jcmore2@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

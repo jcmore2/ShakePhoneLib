@@ -1,2 +1,2 @@
-include ':shakePhoneLib'
-include ':shakePhoneSample'
+include ':shakeit'
+include ':shakeitSample'
