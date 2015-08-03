@@ -9,7 +9,7 @@ import android.content.Intent;
  * 
  * @author jcmore2@gmail.com
  */
-public class ShakePhone {
+public class ShakeIt {
 
 	static ShakeListener shakeListener;
 	static int threshold = 25;
@@ -42,9 +42,9 @@ public class ShakePhone {
 	 */
 	public static void initializeShakeService(Context context, int threshold,
 			int interval, ShakeListener shakeListener) {
-		ShakePhone.threshold = threshold;
-		ShakePhone.interval = interval;
-		ShakePhone.shakeListener = shakeListener;
+		ShakeIt.threshold = threshold;
+		ShakeIt.interval = interval;
+		ShakeIt.shakeListener = shakeListener;
 		Intent intent = new Intent(context, ShakeService.class);
 		context.startService(intent);
 	}
@@ -57,7 +57,7 @@ public class ShakePhone {
 	 *            used to stop the service
 	 */
 	public static void stopShakeService(Context context) {
-		ShakePhone.shakeListener = null;
+		ShakeIt.shakeListener = null;
 		Intent intent = new Intent(context, ShakeService.class);
 		context.stopService(intent);
 	}

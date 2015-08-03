@@ -26,8 +26,8 @@ public class ShakeService extends Service {
 
 		if (ShakeManager.isSupported(context)) {
 			// Start Accelerometer Listening
-			ShakeManager.startListening(ShakePhone.shakeListener,
-					ShakePhone.threshold, ShakePhone.interval);
+			ShakeManager.startListening(ShakeIt.shakeListener,
+					ShakeIt.threshold, ShakeIt.interval);
 		}
 
 		return super.onStartCommand(intent, flags, startId);

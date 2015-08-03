@@ -10,6 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.jcmore2.shakeit.ShakeIt;
+import com.jcmore2.shakeit.ShakeListener;
+
 
 /**
  * Sample activity created to show how to use ShakePhone library.
@@ -57,7 +60,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void initializeShakeService() {
-		ShakePhone.initializeShakeService(this, new ShakeListener() {
+		ShakeIt.initializeShakeService(this, new ShakeListener() {
 
 			@Override
 			public void onShake(float force) {
@@ -75,7 +78,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void stopShakeService() {
-		ShakePhone.stopShakeService(this);
+		ShakeIt.stopShakeService(this);
 	}
 
 	private void showToast(float force) {
