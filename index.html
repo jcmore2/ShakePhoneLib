@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Shakephonelib by jcmore2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Shakephonelib</h1>
+      <h2 class="project-tagline">Android library used for listen shake movements of phone</h2>
+      <a href="https://github.com/jcmore2/ShakePhoneLib" class="btn">View on GitHub</a>
+      <a href="https://github.com/jcmore2/ShakePhoneLib/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jcmore2/ShakePhoneLib/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="shakeit" class="anchor" href="#shakeit" aria-hidden="true"><span class="octicon octicon-link"></span></a>ShakeIt</h1>
+
+<p>This library runs background service that is listening for shake movements in device.</p>
+
+<p><img src="./Sample.png" width="270" height="480"></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Add library to your build.gradle:</p>
+
+<div class="highlight highlight-java"><pre>
+        compile <span class="pl-s"><span class="pl-pds">'</span>com.jcmore2.shakeit:shakeit:1.0.0<span class="pl-pds">'</span></span>
+</pre></div>
+
+<p>Declare ShakeIt service in your AndroidManifest:</p>
+
+<div class="highlight highlight-xml"><pre>
+&lt;<span class="pl-ent">service</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>com.jcmore2.shakeit.ShakeService<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">exported</span>=<span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">label</span>=<span class="pl-s"><span class="pl-pds">"</span>@string/app_name<span class="pl-pds">"</span></span>/&gt;
+</pre></div>
+
+<p>To use ShakePhone library you can initialize <code>ShakeIt</code> using a Context instance and one <code>ShakeListener</code>:</p>
+
+<div class="highlight highlight-java"><pre>
+        <span class="pl-smi">ShakeIt</span><span class="pl-k">.</span>initializeShakeService(<span class="pl-v">this</span>, <span class="pl-k">new</span> <span class="pl-smi">ShakeListener</span>() {
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onShake</span>(<span class="pl-k">float</span> <span class="pl-v">force</span>) {
+                    shakeButtons();
+
+            }
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onAccelerationChanged</span>(<span class="pl-k">float</span> <span class="pl-v">x</span>, <span class="pl-k">float</span> <span class="pl-v">y</span>, <span class="pl-k">float</span> <span class="pl-v">z</span>) {
+
+            }
+        });
+</pre></div>
+
+<p>Or customizing <code>threshold</code> and <code>interval</code>:</p>
+
+<div class="highlight highlight-java"><pre>
+        <span class="pl-smi">ShakeIt</span><span class="pl-k">.</span>initializeShakeService(<span class="pl-v">this</span>, <span class="pl-c1">20</span>, <span class="pl-c1">600</span>, <span class="pl-k">new</span> <span class="pl-smi">ShakeListener</span>() {
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onShake</span>(<span class="pl-k">float</span> <span class="pl-v">force</span>) {
+                    shakeButtons();
+
+            }
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onAccelerationChanged</span>(<span class="pl-k">float</span> <span class="pl-v">x</span>, <span class="pl-k">float</span> <span class="pl-v">y</span>, <span class="pl-k">float</span> <span class="pl-v">z</span>) {
+
+            }
+        });</pre></div>
+
+<p>You can stop the ShakeIt service like in this sample:</p>
+
+<div class="highlight highlight-java"><pre>
+    <span class="pl-smi">ShakeIt</span><span class="pl-k">.</span>stopShakeService(context);
+</pre></div>
+
+<p>and Just Shake your phone!!</p>
+
+<h2>
+<a id="credits--contact" class="anchor" href="#credits--contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits &amp; Contact</h2>
+
+<p>ShakePhone was created by <a href="mailto:jcmore2@gmail.com">jcmore2@gmail.com</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>ShakePhone is available under the Apache License, Version 2.0.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jcmore2/ShakePhoneLib">Shakephonelib</a> is maintained by <a href="https://github.com/jcmore2">jcmore2</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
